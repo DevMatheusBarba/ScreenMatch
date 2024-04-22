@@ -4,10 +4,10 @@ O Projeto Screenmatch é um projeto de software desenvolvido na linguagem Java q
 
 ## Pilares da POO
 
-1. **Abstração**: Criação de entidades complexas por meio de entidades mais simples.
-2. **Encapsulamento**: Ocultação dos detalhes de implementação e exibição apenas da funcionalidade ao usuário.
-3. **Herança**: Processo pelo qual uma classe pode ser derivada de uma classe base.
-4. **Polimorfismo**: Princípio pelo qual uma ação pode ser realizada de diferentes maneiras.
+1. `Abstração`: Criação de entidades complexas por meio de entidades mais simples.
+2. `Encapsulamento`: Ocultação dos detalhes de implementação e exibição apenas da funcionalidade ao usuário.
+3. `Herança`: Processo pelo qual uma classe pode ser derivada de uma classe base.
+4. `Polimorfismo`: Princípio pelo qual uma ação pode ser realizada de diferentes maneiras.
 
 ## Interfaces Java
 
