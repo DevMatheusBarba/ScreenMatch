@@ -1,15 +1,16 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculo.Calculadora;
 import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelo.Episodio;
 import br.com.alura.screenmatch.modelo.Filme;
 import br.com.alura.screenmatch.modelo.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
-        Filme novoFilme = new Filme();
-
-        novoFilme.setNome("O Poderoso chefão");
-        novoFilme.setAnoDeLancamento(1970);
+        Filme novoFilme = new Filme("O Poderoso chefão", 1970);
         novoFilme.setDuracaoEmMinutos(180);
 
         novoFilme.exibeFichaTecninca();
@@ -21,9 +22,7 @@ public class Principal {
         System.out.println("Média do filme: " + novoFilme.pegaMedia());
         System.out.println("Total de avaliação: " + novoFilme.getTotalDeAvalicao());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecninca();
         lost.setTemporadas(10);
         lost.setEpisodioPorTemporada(10);
@@ -39,10 +38,23 @@ public class Principal {
         Episodio novoEpisodio = new Episodio();
         novoEpisodio.setNumero(1);
         novoEpisodio.setSerie(lost);
-        novoEpisodio.setTotalVisualizacao(103z);
+        novoEpisodio.setTotalVisualizacao(103);
 
         FiltroRecomendacao novoFilto = new FiltroRecomendacao();
         novoFilto.filrar(novoEpisodio);
         novoFilto.filrar(novoFilme);
+
+        var filmePaulo = new Filme("Dogville", 2003);
+        filmePaulo.setDuracaoEmMinutos(200);
+        filmePaulo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
+        listaDeFilmes.add(novoFilme);
+        listaDeFilmes.add(filmePaulo);
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("toString: " + listaDeFilmes.get(0).toString());
     }
 }
